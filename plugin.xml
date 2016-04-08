@@ -4,17 +4,19 @@
     <description>This plugin sets ITSEncryptionExportComplianceCode in *-Info.plist file</description>
     <license>Apache 2.0</license>
     <engines>
-        <engine name="cordova-ios" version=">=3.0.0" />
+      <engine name="cordova-ios" version=">=3.0.0" />
     </engines>
     <keywords>ios,export,compliance</keywords>
     <!-- ios -->
     <platform name="ios">
-	<preference name="EXPORT_COMPLIANCE_CODE" />
+        <preference name="EXPORT_COMPLIANCE_CODE"/>
         <config-file target="*-Info.plist" parent="CFBundleURLTypes">
             <array>
                 <dict>
-	            <key>ITSAppUsesNonExemptEncryption</key></true>
-	    	    <key>ITSEncryptionExportComplianceCode</key><string>$EXPORT_COMPLIANCE_CODE</string>
+                    <key>ITSAppUsesNonExemptEncryption</key>
+                    <true/>
+                    <key>ITSEncryptionExportComplianceCode</key>
+                    <string>$EXPORT_COMPLIANCE_CODE</string>
                 </dict>
             </array>
         </config-file>
