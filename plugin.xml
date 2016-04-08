@@ -10,15 +10,11 @@
     <!-- ios -->
     <platform name="ios">
         <preference name="EXPORT_COMPLIANCE_CODE"/>
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
-            <array>
-                <dict>
-                    <key>ITSAppUsesNonExemptEncryption</key>
-                    <true/>
-                    <key>ITSEncryptionExportComplianceCode</key>
-                    <string>$EXPORT_COMPLIANCE_CODE</string>
-                </dict>
-            </array>
+        <config-file target="*-Info.plist" parent="ITSAppUsesNonExemptEncryption">
+          <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="ITSEncryptionExportComplianceCode">
+          <string>$EXPORT_COMPLIANCE_CODE</string>
         </config-file>
     </platform>
 </plugin>
